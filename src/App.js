@@ -1,12 +1,28 @@
 import React from 'react';
-import './App.css';
+import {BrowserRouter,Switch,Route} from 'react-router-dom'
+import Index from './views/Login/index'
 
-function App() {
-  return (
-    <div className="App">
-      这是一个小型的后台管理项目
-    </div>
-  );
+
+class App extends React.Component{
+  constructor(){
+    super()
+    this.state={}
+  }
+
+  render(){
+    return(
+      <div className="test">
+      <div>
+        <BrowserRouter>
+          <Switch>
+            <Route path="/" component={Index} exact></Route>
+          </Switch>
+        </BrowserRouter>
+      </div>
+      </div>
+    )
+  }
 }
+
 
 export default App;
